@@ -7,13 +7,58 @@ export default function TilesPage() {
   const { slug } = useParams()
   const tile = tileData[slug]
 
-  if (!tile) {
-    return (
-      <div className="py-32 text-center">
-        <h1 className="text-3xl font-bold">Tile not found</h1>
+   if (!tile) {
+    return (<>
+    <PageMeta
+        title={`Our Tile Collection | Shiv Shakti Granites`}
+        description={"Our Tile Collection | Shiv Shakti Granites"}
+      />
+    <section className="py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <h1 className="text-4xl font-bold text-center mb-16">
+          Our Tile Collection
+        </h1>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {Object.entries(tileData).map(([key, item]) => (
+            <motion.div
+              key={key}
+              whileHover={{ y: -6 }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+            >
+              <img
+                src={item.image}
+                className="w-full h-56 object-cover"
+              />
+
+              <div className="p-6">
+                <h2 className="text-xl font-semibold">
+                  {item.title}
+                </h2>
+
+                <p className="mt-3 text-muted-foreground text-sm">
+                  {item.description}
+                </p>
+
+                <a
+                  href={`/marble/${key}`}
+                  className="inline-block mt-4 text-primary font-medium"
+                >
+                  View Details →
+                </a>
+              </div>
+            </motion.div>
+          ))}
+
+        </div>
+
       </div>
-    )
-  }
+    </section>
+    </>
+  )
+}
 
   return (
     <>
@@ -64,6 +109,48 @@ export default function TilesPage() {
         </div>
 
       </section>
+            <section className="pb-24 bg-background">
+                  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            
+                    <h1 className="text-4xl font-bold text-center mb-16">
+                      Our Others Tiles Collection
+                    </h1>
+            
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                      {Object.entries(tileData).map(([key, item]) => (
+                        <motion.div
+                          key={key}
+                          whileHover={{ y: -6 }}
+                          className="bg-white rounded-xl shadow-lg overflow-hidden"
+                        >
+                          <img
+                            src={item.image}
+                            className="w-full h-56 object-cover"
+                          />
+            
+                          <div className="p-6">
+                            <h2 className="text-xl font-semibold">
+                              {item.title}
+                            </h2>
+            
+                            <p className="mt-3 text-muted-foreground text-sm">
+                              {item.description}
+                            </p>
+            
+                            <a
+                              href={`/tiles/${key}`}
+                              className="inline-block mt-4 text-primary font-medium"
+                            >
+                              View Details →
+                            </a>
+                          </div>
+                        </motion.div>
+                      ))}
+            
+                </div>
+                </div>
+                </section>
     </>
   )
 }

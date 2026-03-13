@@ -1,4 +1,6 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import { Button } from "../ui/button"
 
 const images = [
   // "/gallery/gallery1.jpeg",
@@ -52,6 +54,15 @@ export default function Gallery() {
             </motion.div>
           ))}
 
+        </div>
+
+        <div className="mt-4 flex items-center justify-center">
+
+        <Link to={"/gallery"} className="cursor-pointer">
+              <Button className="cursor-pointer" size="lg" variant="outline">
+                Explore More Collection
+              </Button>
+            </Link>
         </div>
 
       </div>

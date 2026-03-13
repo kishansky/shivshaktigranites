@@ -1,22 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const products = [
   {
     name: "Galaxy Marble",
     image: "/marble/galaxy-marble.jpeg",
+    path:"/marble/galaxy-marble"
   },
   {
     name: "Makrana Marble",
     image: "/marble/makrana-marble.jpeg",
+    path:"/marble/makrana-marble"
   },
   {
     name: "Udaipur Green Marble",
     image: "/marble/udaipur-green-marble.jpeg",
+    path:"/marble/udaipur-green-marble"
   },
 {
   name: "Rajnagar Marble",
   image: "/marble/rajnagar-marble.jpg",
+  path:"/marble/rajnagar-marble"
 }
 ]
 
@@ -47,7 +52,7 @@ export default function ImportantMarble() {
             >
 
               <Card className="overflow-hidden cursor-pointer">
-
+                <Link to={product.path}>
                 <CardContent className="p-0">
 
                   <img
@@ -59,7 +64,8 @@ export default function ImportantMarble() {
                     {product.name}
                   </div>
 
-                </CardContent>
+                  </CardContent>
+                  </Link>
 
               </Card>
 

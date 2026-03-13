@@ -57,8 +57,7 @@ export default function Gallery() {
         title="Gallery | Shiv Shakti Granites"
         description="Explore our gallery showcasing premium granite, marble, tiles, and natural stone installations for homes and commercial spaces."
       />
-      <section className="py-16 bg-background">
-        <ProductShortcuts />
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <h1 className="text-4xl font-bold">Our Gallery</h1>
@@ -85,6 +84,7 @@ export default function Gallery() {
               </motion.div>
             ))}
           </motion.div>
+        <ProductShortcuts />
         </div>
       </section>
     </>

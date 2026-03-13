@@ -1,11 +1,8 @@
-
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
-
   const stones = [
     "/stones/stone1.png",
     "/stones/stone2.png",
@@ -25,16 +22,16 @@ export default function Hero() {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.12
-      }
-    }
+        staggerChildren: 0.12,
+      },
+    },
   };
 
   const item = {
     hidden: {
       opacity: 0,
       y: 40,
-      scale: 0.8
+      scale: 0.8,
     },
     show: {
       opacity: 1,
@@ -42,19 +39,16 @@ export default function Hero() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <section className="relative overflow-hidden bg-background py-24">
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-
         {/* LEFT CONTENT */}
         <div>
-
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,20 +63,26 @@ export default function Hero() {
           </motion.h1>
 
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-lg">
-            Shiv Shakti Granites offers high-quality granite, marble and
-            natural stone products for homes and commercial spaces.
+            Shiv Shakti Granites offers high-quality granite, marble and natural
+            stone products for homes and commercial spaces.
           </p>
 
           <div className="flex gap-4 mt-8 flex-wrap">
-            <Link to={'/gallery'} className="cursor-pointer"><Button className="cursor-pointer" size="lg">Explore Collection</Button></Link>
-            <Link to={'/contact-us'} className="cursor-pointer"><Button className="cursor-pointer" size="lg" variant="outline">Contact Us</Button></Link>
+            <Link to={"/gallery"} className="cursor-pointer">
+              <Button className="cursor-pointer" size="lg">
+                Explore Collection
+              </Button>
+            </Link>
+            <Link to={"/contact-us"} className="cursor-pointer">
+              <Button className="cursor-pointer" size="lg" variant="outline">
+                Contact Us
+              </Button>
+            </Link>
           </div>
-
         </div>
 
         {/* RIGHT GRID */}
         <div className="flex justify-center lg:-mt-5">
-
           <motion.div
             variants={container}
             initial="hidden"
@@ -90,7 +90,6 @@ export default function Hero() {
             viewport={{ once: false, amount: 0.3 }}
             className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-4 rotate-[-12deg]"
           >
-
             {stones.map((stone, index) => (
               <motion.img
                 key={index}
@@ -106,13 +105,9 @@ export default function Hero() {
     cursor-grab active:cursor-grabbing"
               />
             ))}
-
           </motion.div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
@@ -236,13 +231,13 @@ export default function Hero() {
 //                 whileDrag={{ scale: 1.15, rotate: 5 }}
 //                 whileHover={{ scale: 1.08 }}
 
-    //             className="   w-20 h-28 sm:w-24 sm:h-32 lg:w-28 lg:h-40
-    // object-cover
-    // rounded-xl
-    // border border-white/20
-    // shadow-[0_12px_22px_rgba(0,0,0,0.35),0_8px_15px_rgba(0,0,0,0.25)]
-    // hover:shadow-[0_15px_25px_rgba(0,0,0,0.45),0_12px_25px_rgba(0,0,0,0.35)]
-    // cursor-grab active:cursor-grabbing"
+//             className="   w-20 h-28 sm:w-24 sm:h-32 lg:w-28 lg:h-40
+// object-cover
+// rounded-xl
+// border border-white/20
+// shadow-[0_12px_22px_rgba(0,0,0,0.35),0_8px_15px_rgba(0,0,0,0.25)]
+// hover:shadow-[0_15px_25px_rgba(0,0,0,0.45),0_12px_25px_rgba(0,0,0,0.35)]
+// cursor-grab active:cursor-grabbing"
 //               />
 // //               <motion.img
 // //   key={index}

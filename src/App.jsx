@@ -19,8 +19,11 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/granite" element={<GranitePage />} />
         <Route path="/granite/:slug" element={<GranitePage />} />
+        <Route path="/marble" element={<MarblePage />} />
         <Route path="/marble/:slug" element={<MarblePage />} />
+        <Route path="/tiles" element={<TilesPage />} />
         <Route path="/tiles/:slug" element={<TilesPage />} />
         <Route path="/stone/:slug" element={<StonePage />} />
         

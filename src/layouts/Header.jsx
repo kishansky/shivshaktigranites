@@ -16,7 +16,7 @@ function Header() {
           <img
             src="/shiv-shakti.png"
             alt="Shiv Shakti Granites"
-            className="h-10 transition"
+            className="h-14 transition"
           />
         </Link>
 

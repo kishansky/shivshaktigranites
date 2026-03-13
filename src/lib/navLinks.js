@@ -3,6 +3,7 @@ export const navLinks = [
 
   {
     name: "Granite",
+    path:"granite",
     child: [
       { name: "Black Granite", path: "/granite/black-granite" },
       { name: "White Granite", path: "/granite/white-granite" },
@@ -14,6 +15,7 @@ export const navLinks = [
 
   {
     name: "Marble",
+    path:"marble",
     child: [
       { name: "Italian Marble", path: "/marble/italian-marble" },
       { name: "Indian Marble", path: "/marble/indian-marble" },
@@ -29,7 +31,8 @@ export const navLinks = [
   },
 
   {
-  name: "Tiles",
+    name: "Tiles",
+    path:"tiles",
   child: [
     { name: "Floor Tiles", path: "/tiles/floor-tiles" },
     { name: "Wall Tiles", path: "/tiles/wall-tiles" },
@@ -45,6 +48,7 @@ export const navLinks = [
 
 {
   name: "Stone Products",
+  path:"stone",
   child: [
     { name: "Sandstone", path: "/stone/sandstone" },
     { name: "Quartz Stone", path: "/stone/quartz" },
